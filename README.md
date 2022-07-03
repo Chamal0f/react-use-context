@@ -6,7 +6,7 @@ export 3 modules, a provider, a state hook with selector (not memoized to preven
 
 
 ``` 
-import {createContext} from "use-context";
+import {createContext} from "react-use-context";
 
 
 type TState = {
@@ -26,10 +26,10 @@ export const { useStore, Provider, useActions } = createContext<TState, TActions
   },
   actions: {
     modifyVariable1 : (state, payload  ) => {
-      return { ...state,test: payload }
+      return { ...state,variable1: payload }
     },
     modifyVariable2 : (state, payload  ) => {
-      return { ...state,test: payload }
+      return { ...state,variable2: payload }
     },
   }
 });
